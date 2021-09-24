@@ -1,0 +1,18 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload pictures</title>
+        <link href="{% static 'service/css/dropzone.css' %}" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <form class="dropzone" action="{% url 'home' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="fallback">
+                <input name="file" type="file" multiple />
+            </div>
+        </form>
+        <script src="{% static 'service/js/dropzone.js' %}"></script>
+    </body>
+</html>

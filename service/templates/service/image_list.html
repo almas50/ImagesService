@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thumbnails</title>
+</head>
+<body>
+{%  for image in image_list %}
+    <img src="{{ image.data_thumbnail.url }}" >
+{%  endfor %}
+</body>
+</html>
